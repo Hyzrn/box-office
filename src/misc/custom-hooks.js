@@ -13,13 +13,14 @@ function showsReducer(prevState, action) {
   }
 }
 
-function usePersistedReducer(reducer, initialSate, key) {
+function usePersistedReducer(reducer, initialState, key) {
   const [state, dispatch] = useReducer(reducer, initialState, initial => {
     const persisted = localStorage.getItem(key);
     return persisted ? JSON.parse(persisted) : initial;
   });
 
   useEffect(() => {
+    console.log('effect');
     localStorage.setItem(key, JSON.stringify(state));
   }, [state, key]);
 

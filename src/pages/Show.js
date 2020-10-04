@@ -8,7 +8,6 @@ import ShowMainData from '../components/show/ShowMainData';
 import { apiGet } from '../misc/config';
 import { ShowPageWrapper, InfoBlock } from './Show.styled';
 
-const reducer = (prevState, action) => {};
 const Show = () => {
   const { id } = useParams();
   // const [show, setShow] = useState(null);
