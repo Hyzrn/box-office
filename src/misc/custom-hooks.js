@@ -20,7 +20,6 @@ function usePersistedReducer(reducer, initialState, key) {
   });
 
   useEffect(() => {
-    console.log('effect');
     localStorage.setItem(key, JSON.stringify(state));
   }, [state, key]);
 
